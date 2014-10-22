@@ -24,6 +24,7 @@ Thermostat.prototype.decreaseTemp = function() {
 Thermostat.prototype.decreaseTempBy = function(degrees) {
 	if(this.temperature - degrees >= this.minTemp)
 		return this.temperature -= degrees;
+	
 	else
 		return 'Are you insane?!';
 };
@@ -35,4 +36,8 @@ Thermostat.prototype.powerSaverOff = function() {
 
 Thermostat.prototype.resetTemp = function() {
 	return this.temperature = 20;
+};
+
+Thermostat.prototype.changeColor = function(color) {
+	this.color = color;
 };
