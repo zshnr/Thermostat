@@ -28,7 +28,7 @@ Thermostat.prototype.decreaseTempBy = function(degrees) {
 	if(this.temperature - degrees >= this.minTemp){
 		if(this.temperature - degrees <= 18) {
 			this.color = 'blue';}
-			this.temperature -= degrees;
+			return this.temperature -= degrees;
 		}
 	else
 		return 'Are you insane?!';
