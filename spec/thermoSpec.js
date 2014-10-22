@@ -71,7 +71,7 @@ describe('custom options', function(){
 		expect(thermostat.color).toEqual('burgundy');
 	});
 
-	xit('color changes to blue if temp less than 18', function(){
+	it('color changes to blue if temp less than 18', function(){
 		thermostat.decreaseTempBy(3);
 		expect(thermostat.color).toEqual('blue');
 	});

@@ -22,9 +22,11 @@ Thermostat.prototype.decreaseTemp = function() {
 };
 
 Thermostat.prototype.decreaseTempBy = function(degrees) {
-	if(this.temperature - degrees >= this.minTemp)
-		return this.temperature -= degrees;
-	
+	if(this.temperature - degrees >= this.minTemp){
+		if(this.temperature - degrees <= 18) {
+			this.color = 'blue';}
+			this.temperature -= degrees;
+		}
 	else
 		return 'Are you insane?!';
 };
