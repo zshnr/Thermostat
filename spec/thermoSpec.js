@@ -24,10 +24,10 @@ describe('By Default', function(){
 		expect(thermostat.temperature).toEqual(21);
 	});
 
-	// it('can decrease the temperature by one degree', function(){
-	// 	thermostat.decreaseTemp(1);
-	// 	expect(thermostat.temperature).toEqual(19);
-	// });
+	it('can decrease the temperature by one degree', function(){
+		thermostat.decreaseTemp(1);
+		expect(thermostat.temperature).toEqual(19);
+	});
 
 });
 

@@ -11,9 +11,9 @@ Thermostat.prototype.increaseTempBy = function(degrees) {
 	this.temperature += degrees;
 };
 
-// Thermostat.prototype.decreaseTemp = function() {
-// 	this.temperature = this.temperature - 1;
-// };
+Thermostat.prototype.decreaseTemp = function() {
+	this.temperature = this.temperature - 1;
+};
 
 // Termostat.prototype.decreaseTempBy = function(degrees) {
 // 	this.temperature -= degrees;
