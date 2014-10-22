@@ -37,7 +37,7 @@ describe('By Default', function(){
 		expect(thermostat.maxTemp).toEqual(25);
 	});
 
-	it('has a default color of red', function(){
+	it('has a default display color of red', function(){
 		expect(thermostat.color).toEqual('red');
 	});
 
@@ -64,6 +64,11 @@ describe('custom options', function(){
 		thermostat.increaseTempBy(5);
 		thermostat.resetTemp();
 		expect(thermostat.temperature).toEqual(20);
+	});
+
+	it('color changes to blue if temp less than 18', function(){
+		thermostat.decreaseTempBy(3);
+		expect(thermostat.color).toEqual('blue');
 	});
 });
 
