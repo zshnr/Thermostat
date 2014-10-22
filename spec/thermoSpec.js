@@ -38,6 +38,9 @@ describe('custom options', function(){
 		expect(thermostat.temperature).toEqual(32);
 	});
 
-	// it('', function())
+	it('can decrease the temp by 5', function(){
+		thermostat.decreaseTempBy(5);
+		expect(thermostat.temperature).toEqual(15);
+	});
 });
 });
