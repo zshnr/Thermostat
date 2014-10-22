@@ -6,23 +6,23 @@ function Thermostat(){
 };
 
 Thermostat.prototype.increaseTemp = function() {
-	this.increaseTempBy(1);
+	return this.increaseTempBy(1);
 };
 
 Thermostat.prototype.increaseTempBy = function(degrees) {
 	if(this.temperature + degrees <= this.maxTemp)
-		this.temperature += degrees;
+		return this.temperature += degrees;
 	else
 		return 'Save power, miser!';
 };
 
 Thermostat.prototype.decreaseTemp = function() {
-	this.decreaseTempBy(1);
+	return this.decreaseTempBy(1);
 };
 
 Thermostat.prototype.decreaseTempBy = function(degrees) {
 	if(this.temperature - degrees >= this.minTemp)
-		this.temperature -= degrees;
+		return this.temperature -= degrees;
 	else
 		return 'Are you insane?!';
 };
