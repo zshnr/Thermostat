@@ -46,6 +46,11 @@ describe('custom options', function(){
 		thermostat.decreaseTempBy(5);
 		expect(thermostat.temperature).toEqual(15);
 	});
+
+	it('can turn off power saving mode', function(){
+		thermostat.powerSaverOff();
+		expect(thermostat.isPowerSaverOn).toBe(false);
+	});
 });
 
 describe('Limits', function(){
