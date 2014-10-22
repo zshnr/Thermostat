@@ -29,6 +29,10 @@ describe('By Default', function(){
 		expect(thermostat.temperature).toEqual(19);
 	});
 
+	it('it has a minimum temperature of 10', function(){
+		expect(thermostat.minTemp).toEqual(10);
+	});
+
 });
 
 describe('custom options', function(){
