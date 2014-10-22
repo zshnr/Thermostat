@@ -33,7 +33,7 @@ describe('By Default', function(){
 		expect(thermostat.minTemp).toEqual(10);
 	});
 
-	it('it has a maximum temperature ', function(){
+	it('it has a maximum temperature of 25', function(){
 		expect(thermostat.maxTemp).toEqual(25);
 	});
 
@@ -41,9 +41,9 @@ describe('By Default', function(){
 
 describe('custom options', function(){
 
-	it('can increase the temp by 12', function(){
-		thermostat.increaseTempBy(12);
-		expect(thermostat.temperature).toEqual(32);
+	it('can increase the temp by 5', function(){
+		thermostat.increaseTempBy(5);
+		expect(thermostat.temperature).toEqual(25);
 	});
 
 	it('can decrease the temp by 5', function(){
@@ -63,8 +63,13 @@ describe('Limits', function(){
 		expect(thermostat.decreaseTempBy(12)).toEqual('Are you insane?!');
 	});
 
-	xit('', function(){
+	it('cannot increase temp past the max of 25 if power saver mode is on', function(){
+		expect(thermostat.increaseTempBy(6)).toEqual('Save power, miser!');
+	});
 
+	it('max temp is set to 32 degrees if power saver mode is off', function(){
+		thermostat.powerSaverOff();
+		expect(thermostat.maxTemp).toEqual(32);
 	});
 });
 });
