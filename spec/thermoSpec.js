@@ -47,4 +47,11 @@ describe('custom options', function(){
 		expect(thermostat.temperature).toEqual(15);
 	});
 });
+
+describe('Limits', function(){
+
+	it('cannot decrease temp past the minimum limit of 10', function(){
+		expect(thermostat.decreaseTempBy(12)).toEqual('Are you insane?!');
+	});
+});
 });

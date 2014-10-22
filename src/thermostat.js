@@ -17,5 +17,8 @@ Thermostat.prototype.decreaseTemp = function() {
 };
 
 Thermostat.prototype.decreaseTempBy = function(degrees) {
-	this.temperature -= degrees;
+	if(this.temperature - degrees >= this.minTemp)
+		this.temperature -= degrees;
+	else
+		return 'Are you insane?!';
 };
