@@ -71,5 +71,10 @@ describe('Limits', function(){
 		thermostat.powerSaverOff();
 		expect(thermostat.maxTemp).toEqual(32);
 	});
+
+	it('cannot increase temp past the max of 32 if power saver mode is off', function(){
+		thermostat.powerSaverOff();
+		expect(thermostat.increaseTempBy(13)).toEqual('Save power, miser!');
+	});
 });
 });
