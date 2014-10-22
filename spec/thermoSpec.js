@@ -86,6 +86,12 @@ describe('custom options', function(){
 		thermostat.powerSaverOn();
 		expect(thermostat.isPowerSaverOn).toBe(true);
 	});
+
+	it('power saver switch turns function on if off', function(){
+		thermostat.powerSaverOff();
+		thermostat.powerSaverSwitch();
+		expect(thermostat.isPowerSaverOn).toBe(true);
+	});
 });
 
 describe('Limits', function(){

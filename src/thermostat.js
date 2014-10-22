@@ -51,3 +51,12 @@ Thermostat.prototype.powerSaverOn = function() {
 	this.isPowerSaverOn = true;
 	this.maxTemp = 25;
 };
+
+Thermostat.prototype.powerSaverSwitch = function() {
+	if(this.isPowerSaverOn === true)
+		{return this.powerSaverOff();}
+	if(this.isPowerSaverOn === false)
+		{return this.powerSaverOn();}
+	else
+		return "Cannot determine status of power saver mode";
+};

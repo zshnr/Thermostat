@@ -7,7 +7,7 @@ body
 	background-color: gray;
 }
 
-section .heading
+section .heading.h1
 {
 	text-align: center;
 }
