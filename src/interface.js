@@ -11,7 +11,3 @@ ThermostatView.prototype.bindTo = function(selector, obj, func) { //
 		$('.temperature h1').text(func.call(obj));
 	});
 };
-
-$(document).ready(function(){
-	new ThermostatView('.temperature h1');
-});

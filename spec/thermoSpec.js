@@ -55,6 +55,12 @@ describe('custom options', function(){
 		thermostat.powerSaverOff();
 		expect(thermostat.isPowerSaverOn).toBe(false);
 	});
+
+	it('can reset temp back to default of 20', function(){
+		thermostat.increaseTempBy(5);
+		thermostat.resetTemp();
+		expect(thermostat.temperature).toEqual(20);
+	});
 });
 
 describe('Limits', function(){
