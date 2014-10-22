@@ -3,6 +3,7 @@ function Thermostat(){
 	this.isPowerSaverOn = true;
 	this.minTemp = 10;
 	this.maxTemp = 25;
+	this.color = 'red';
 };
 
 Thermostat.prototype.increaseTemp = function() {

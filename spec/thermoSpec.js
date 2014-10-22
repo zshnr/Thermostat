@@ -37,6 +37,10 @@ describe('By Default', function(){
 		expect(thermostat.maxTemp).toEqual(25);
 	});
 
+	it('has a default color of red', function(){
+		expect(thermostat.color).toEqual('red');
+	});
+
 });
 
 describe('custom options', function(){
