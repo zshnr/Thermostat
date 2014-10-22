@@ -46,3 +46,8 @@ Thermostat.prototype.resetTemp = function() {
 Thermostat.prototype.changeColor = function(color) {
 	this.color = color;
 };
+
+Thermostat.prototype.powerSaverOn = function() {
+	this.isPowerSaverOn = true;
+	this.maxTemp = 25;
+};

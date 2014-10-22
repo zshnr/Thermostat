@@ -80,6 +80,12 @@ describe('custom options', function(){
 		thermostat.increaseTempBy(4);
 		expect(thermostat.color).toEqual('orange');
 	});
+
+	it('can turn power saver mode on if it is off', function(){
+		thermostat.powerSaverOff();
+		thermostat.powerSaverOn();
+		expect(thermostat.isPowerSaverOn).toBe(true);
+	});
 });
 
 describe('Limits', function(){
