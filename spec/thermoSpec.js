@@ -33,6 +33,10 @@ describe('By Default', function(){
 		expect(thermostat.minTemp).toEqual(10);
 	});
 
+	it('it has a maximum temperature ', function(){
+		expect(thermostat.maxTemp).toEqual(25);
+	});
+
 });
 
 describe('custom options', function(){
@@ -57,6 +61,10 @@ describe('Limits', function(){
 
 	it('cannot decrease temp past the minimum limit of 10', function(){
 		expect(thermostat.decreaseTempBy(12)).toEqual('Are you insane?!');
+	});
+
+	xit('', function(){
+
 	});
 });
 });
