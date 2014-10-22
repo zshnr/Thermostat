@@ -75,6 +75,11 @@ describe('custom options', function(){
 		thermostat.decreaseTempBy(3);
 		expect(thermostat.color).toEqual('blue');
 	});
+
+	it('color changes to orange if temp between 19 and 25', function(){
+		thermostat.increaseTempBy(4);
+		expect(thermostat.color).toEqual('orange');
+	});
 });
 
 describe('Limits', function(){

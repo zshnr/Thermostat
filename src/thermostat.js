@@ -11,8 +11,11 @@ Thermostat.prototype.increaseTemp = function() {
 };
 
 Thermostat.prototype.increaseTempBy = function(degrees) {
-	if(this.temperature + degrees <= this.maxTemp)
-		return this.temperature += degrees;
+	if(this.temperature + degrees <= this.maxTemp){
+		if(this.temperature + degrees <= 25){
+			this.color = 'orange';}
+			return this.temperature += degrees;
+	}
 	else
 		return 'Save power, miser!';
 };
