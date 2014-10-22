@@ -10,5 +10,10 @@ describe('Defaults', function(){
 
 	});
 
+	it('power saving mode is on by default', function(){
+		thermostat = new Thermostat();
+		expect(thermostat.isPowerSaverOn).toBe(true);
+	});
+
 });
 });
