@@ -4,6 +4,7 @@ function ThermostatView(element){
 	this.el.text(this.thermostat.temperature);
 	this.bindTo('.increase_temperature', this.thermostat, this.thermostat.increaseTemp);
 	this.bindTo('.decrease_temperature', this.thermostat, this.thermostat.decreaseTemp);
+	this.bindTo('.reset', this.thermostat, this.thermostat.resetTemp);
 };
 
 ThermostatView.prototype.bindTo = function(selector, obj, func) { //
