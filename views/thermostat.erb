@@ -8,7 +8,8 @@
 		<section class="Heading">
 			<h1> That Thing That Shows And Changes The Temperature </h1>
 		<section class="Temperature">
-			<h1>The Temperature Now</h1>
+			<h2>The Temperature Now</h2>
+			<h3>Thermostat temperature</h3>
 			<aside>
 			 <nav>
 			  <ul>
@@ -25,9 +26,10 @@
 		<script src="src/interface.js"></script>
 		<script>
 			$(document).ready(function(){
-				var currentTemp;
-				$.getJSON('/weather', function(data) {currentTemp = data['list'][1]['main']['temp']})
-				new ThermostatView('.temperature h1', currentTemp);
+				// var currentTemp;
+				$.getJSON('/weather', function(data) {
+					$('h2').text('Temperature outside:' + ' ' + data['list'][1]['main']['temp'] + 'C')})
+				new ThermostatView('.temperature h3');
 			});
 		</script>
 	</body>
