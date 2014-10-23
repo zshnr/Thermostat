@@ -25,7 +25,8 @@
 		<script src="src/interface.js"></script>
 		<script>
 			$(document).ready(function(){
-				new ThermostatView('.temperature h1');
+				$.get('/weather', function(data) {currentTemp = data['main']['temp']})
+				new ThermostatView('.temperature h1', currentTemp);
 			});
 		</script>
 	</body>
