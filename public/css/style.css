@@ -4,21 +4,58 @@
 
 body 
 {
-	background-color: gray;
+  background-color: gray;
 }
 
 section .heading.h1
 {
-	text-align: center;
+  text-align: center;
 }
 
 section .increase_temperature 
 {
   display: inline-block;
+  text-decoration: none;
   width: 110px;
   cursor: pointer; 
   font-size: 16px;
-  background-color: #82B743;
+  background-color: #FF1300;
+  border: 2px solid white;
+  color: white; /*text colour*/
+  padding: 5px 10px;
+  text-align: center;
+  border-radius: 4px; /*rounded corners*/
+  margin-left: 5px;
+  margin-right: 5px;
+  text-shadow: 0 0 2px rgba(0,0,0,0.4);
+}
+
+section .decrease_temperature
+{
+  display: inline-block;
+  text-decoration: none;
+  width: 110px;
+  cursor: pointer; 
+  font-size: 16px;
+  background-color: #3A1DC5;
+  border: 2px solid white;
+  color: white; /*text colour*/
+  padding: 5px 10px;
+  text-align: center;
+  border-radius: 4px; /*rounded corners*/
+  margin-left: 5px;
+  margin-right: 5px;
+  text-shadow: 0 0 2px rgba(0,0,0,0.4);
+}
+
+section .reset
+{
+  display: inline-block;
+  text-decoration: none;
+  width: 110px;
+  cursor: pointer; 
+  font-size: 16px;
+  background-color: #FF1300;
   border: 2px solid white;
   color: white; /*text colour*/
   padding: 5px 10px;
