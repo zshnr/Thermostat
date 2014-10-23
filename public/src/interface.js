@@ -1,4 +1,4 @@
-function ThermostatView(element, currentTemp){
+function ThermostatView(element){
 	this.el = $(element);
 	this.thermostat = new Thermostat;
 	this.el.text(this.thermostat.temperature);
